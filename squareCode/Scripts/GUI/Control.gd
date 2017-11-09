@@ -8,9 +8,10 @@ func _ready():
 
 
 func _on_begin_pressed():
+	print("begin")
 	print("pressed")
 	animator.play("fadeOut")
 
 func begin():
-	get_tree().change_scene("res://Scenes/Levels/tutorial.tscn")
+	get_node("/root/g").goScene("res://Scenes/Levels/tutorial.tscn")
 	 

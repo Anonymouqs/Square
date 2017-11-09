@@ -1,21 +1,37 @@
 extends TextureButton
-
-var player 
-
+var anim
+var playing = false
 func _ready():
-	player = get_node("AnimationPlayer")
-
+	anim = get_node("AnimationPlayer")
+	set_process(true)
+	
+func _process(delta):
+	if is_hovered() && anim.is_playing():
+		anim.set_speed(1)
+		
 
 func _on_Button_mouse_enter():
-	print(player.is_playing())
-	if player.is_playing():
-		player.set_speed(1)
-		return null
-	player.play("buttonFade")
+	if anim.is_playing():
+		anim.set_speed(1)
 
+	if anim.get_pos() <= 0.2:
+		anim.set_speed(1)
+	if not anim.is_playing():
+		anim.play("buttonFade")
+	OS.delay_msec(100)
+	if anim.get_pos() <= 0.2:
+		anim.set_speed(1)
 
 func _on_Button_mouse_exit():
-	if player.is_playing():
-		player.set_speed(-1)
-		return null
-	player.play_backwards("buttonFade")
+	if anim.get_pos() >= 1:
+		anim.play_backwards("buttonFade")
+		playing = true
+	else:
+		anim.set_speed(-1)
+	
+
+
+
+func _on_AnimationPlayer_finished():
+
+	playing = false

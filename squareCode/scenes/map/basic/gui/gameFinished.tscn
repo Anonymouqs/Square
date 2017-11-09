@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://scenes/gui/Button.tscn" type="PackedScene" id=1]
+
+[node name="GridContainer" type="GridContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 80.0
+margin/top = 41.0
+margin/right = 532.0
+margin/bottom = 264.0
+columns = 1
+
+[node name="Button" parent="." instance=ExtResource( 1 )]
+
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="Label" parent="Button"]
+
+text = "Level Finished"
+
+
+[editable path="Button"]

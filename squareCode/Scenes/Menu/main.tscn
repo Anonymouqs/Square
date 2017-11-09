@@ -1,24 +1,13 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://Scripts/GUI/Control.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/GUI/Button.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Fonts/tuffy-20120614/Tuffy.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://fonts/DynamicFonts/Default.tres" type="DynamicFont" id=3]
 
-[sub_resource type="DynamicFont" id=1]
-
-font/size = 16
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 3 )
-
-[sub_resource type="Theme" id=2]
-
-default_font = SubResource( 1 )
-
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 
 resource/name = "fadeOut"
-length = 2.0
+length = 1.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -26,17 +15,17 @@ tracks/0/path = NodePath("Polygon2D:transform/pos")
 tracks/0/interp = 2
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.7, 1.5, 2 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": FloatArray( 0, 0.7, 1.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1111.18, -13.0781 ), Vector2( 778.734, -13.0781 ), Vector2( 95.6746, -13.0781 ), Vector2( -841.635, -13.0781 ) ]
+"values": [ Vector2( 1111.18, -13.0781 ), Vector2( 778.734, -13.0781 ), Vector2( -841.635, -13.0781 ) ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 2 ),
+"times": FloatArray( 1.5 ),
 "transitions": FloatArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -60,8 +49,10 @@ script/script = ExtResource( 1 )
 
 margin/left = 350.0
 margin/top = 210.0
-margin/right = 650.0
-margin/bottom = 285.0
+margin/right = 668.0
+margin/bottom = 293.0
+toggle_mode = true
+click_on_press = true
 
 [node name="Label" parent="begin"]
 
@@ -72,11 +63,12 @@ text = "Begin"
 
 [node name="credits" parent="." instance=ExtResource( 2 )]
 
-editor/display_folded = true
 margin/left = 350.0
 margin/top = 350.0
-margin/right = 650.0
-margin/bottom = 425.0
+margin/right = 676.0
+margin/bottom = 433.0
+toggle_mode = true
+click_on_press = true
 
 [node name="Label" parent="credits"]
 
@@ -86,28 +78,12 @@ margin/right = 237.0
 margin/bottom = 68.0
 text = "Credits"
 
-[node name="title" type="Label" parent="."]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-theme/theme = SubResource( 2 )
-margin/left = 360.0
-margin/top = 20.0
-margin/right = 619.0
-margin/bottom = 129.0
-text = "Square"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/fadeOut = SubResource( 3 )
+anims/fadeOut = SubResource( 1 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -129,6 +105,23 @@ texture/scale = Vector2( 1, 1 )
 texture/rotation = 0.0
 invert/enable = false
 invert/border = 100.0
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 370.0
+margin/top = 68.0
+margin/right = 637.0
+margin/bottom = 185.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Square"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [connection signal="pressed" from="begin" to="." method="_on_begin_pressed"]
 
