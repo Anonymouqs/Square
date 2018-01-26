@@ -1,5 +1,5 @@
 extends Node
-var scene = null
+var scene
 
 func _ready():
 	var root = get_tree().get_root()
