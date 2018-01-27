@@ -1,4 +1,5 @@
-extends RigidBody2D
+extends "res://scripts/root/Entity.gd"
+
 export var respawn = Vector2(0,0)
 export var speed = 5
 export var jump = 6
