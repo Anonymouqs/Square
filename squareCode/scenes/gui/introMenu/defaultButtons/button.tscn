@@ -1,69 +1,18 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://Scripts/GUI/buttonColorTransition.gd" type="Script" id=1]
 [ext_resource path="res://Animations/GUI/buttonFade.tres" type="Animation" id=2]
-[ext_resource path="res://Fonts/tuffy-20120614/Tuffy.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Animations/GUI/introMenu/buttons/buttonFadeOff.tres" type="Animation" id=3]
+[ext_resource path="res://Animations/GUI/introMenu/buttons/buttonMouseOff.tres" type="Animation" id=4]
+[ext_resource path="res://Animations/GUI/introMenu/buttons/buttonMouseOn.tres" type="Animation" id=5]
+[ext_resource path="res://Fonts/tuffy-20120614/Tuffy.otf" type="DynamicFontData" id=6]
 
-[sub_resource type="Animation" id=1]
-
-resource/name = "buttonMouseOff"
-length = 0.01
-loop = true
-step = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("Polygon2D:color")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Label:custom_colors/font_color")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ) ]
-}
-
-[sub_resource type="Animation" id=2]
-
-resource/name = "buttonMouseOn"
-length = 0.01
-loop = true
-step = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("Polygon2D:color")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Label:custom_colors/font_color")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=1]
 
 font/size = 50
 font/use_mipmaps = false
 font/use_filter = false
-font/font = ExtResource( 3 )
+font/font = ExtResource( 6 )
 
 [node name="Button" type="TextureButton"]
 
@@ -88,8 +37,9 @@ playback/process_mode = 0
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/buttonFade = ExtResource( 2 )
-anims/buttonMouseOff = SubResource( 1 )
-anims/buttonMouseOn = SubResource( 2 )
+anims/buttonFadeOff = ExtResource( 3 )
+anims/buttonMouseOff = ExtResource( 4 )
+anims/buttonMouseOn = ExtResource( 5 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -105,7 +55,7 @@ margin/left = 97.0
 margin/top = 5.0
 margin/right = 198.0
 margin/bottom = 66.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "[label]"
 clip_text = true
@@ -131,5 +81,7 @@ invert/border = 100.0
 [connection signal="mouse_enter" from="." to="." method="_on_Button_mouse_enter"]
 
 [connection signal="mouse_exit" from="." to="." method="_on_Button_mouse_exit"]
+
+[connection signal="finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_finished"]
 
 
