@@ -1,4 +1,4 @@
-extends "res://scenes/map/platforms/deafult/platform.scn"
+extends "res://scripts/root/Entity.gd"
 
 # class member variables go here, for example:
 # var a = 2
