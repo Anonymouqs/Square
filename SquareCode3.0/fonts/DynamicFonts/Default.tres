@@ -1,0 +1,11 @@
+[gd_resource type="DynamicFont" load_steps=1 format=2]
+
+[ext_resource type="DynamicFontData" path="res://Fonts/tuffy-20120614/Tuffy.otf" id=1]
+
+
+[resource]
+
+size=90
+use_mipmaps=false
+use_filter=false
+font_data=ExtResource(1)

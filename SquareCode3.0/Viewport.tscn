@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource type="PackedScene" path="res://scenes/levels/tutorial.scn" id=1]
+
+[ext_resource type="Animation" path="res://animations/level/intro/introText/anotherPlatformer.tres" id=2]
+
+[ext_resource type="Animation" path="res://animations/level/intro/introText/hello.tres" id=3]
+
+[ext_resource type="Animation" path="res://animations/level/intro/introText/blank.tres" id=4]
+
+[ext_resource type="Animation" path="res://animations/level/intro/introText/coin.tres" id=5]
+
+
+[node  name="Viewport" type="ViewportSprite"]
+
+viewport=NodePath("manager")
+
+[node  name="manager" parent="." instance=ExtResource(1)]
+
+position=Vector2( 441.241, 274.482 )
+
+[node  name="AnimationTreePlayer" parent="manager/swipe/intro"]
+
+data={
+"active": true,
+"connections": [ "stage", "out", 0, "blank", "stage", 0, "hello", "stage", 1, "yellowThings", "stage", 2, "anim", "stage", 3 ],
+"master": NodePath(""),
+"nodes": [ {
+"id": "out",
+"pos": Vector2( 477, 63 ),
+"type": "output"
+}, {
+"animation": ExtResource(2),
+"filter": [  ],
+"id": "anim",
+"pos": Vector2( 35, 319 ),
+"type": "animation"
+}, {
+"animation": ExtResource(3),
+"filter": [  ],
+"id": "hello",
+"pos": Vector2( 64, 127 ),
+"type": "animation"
+}, {
+"animation": ExtResource(4),
+"filter": [  ],
+"id": "blank",
+"pos": Vector2( 131, 13 ),
+"type": "animation"
+}, {
+"id": "stage",
+"pos": Vector2( 254, 60 ),
+"transitions": [ {
+"auto_advance": false
+}, {
+"auto_advance": false
+}, {
+"auto_advance": false
+}, {
+"auto_advance": false
+} ],
+"type": "transition",
+"xfade": 1.0
+}, {
+"animation": ExtResource(5),
+"filter": [  ],
+"id": "yellowThings",
+"pos": Vector2( 51, 224 ),
+"type": "animation"
+} ]
+}
+
+[node  name="ViewportSprite" parent="." type="ViewportSprite"]
+
+viewport=NodePath("../..")
+
+[node  name="BackBufferCopy" parent="." type="BackBufferCopy"]
+
+copy_mode=2
+rect=Rect2( -100, -100, 200, 200 )
+[editable path="manager"]
