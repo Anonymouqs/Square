@@ -1,8 +1,10 @@
 [gd_scene load_steps=7 format=1]
 
-[ext_resource path="res://Scripts/GUI/buttonColorTransition.gd" type="Script" id=1]
-[ext_resource path="res://Animations/GUI/buttonFade.tres" type="Animation" id=2]
+[ext_resource path="res://scenes/gui/introMenu/defaultButtons/buttonColorTransition.gd" type="Script" id=1]
+[ext_resource path="res://gui/introMenu/buttons/buttonFadeOff.tres" type="Animation" id=2]
 [ext_resource path="res://Fonts/tuffy-20120614/Tuffy.otf" type="DynamicFontData" id=3]
+
+
 
 [sub_resource type="Animation" id=1]
 
