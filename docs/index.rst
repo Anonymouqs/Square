@@ -2,11 +2,11 @@
 Welcome to Square!
 ==================
 
-
+Oranize:
 
 .. toctree::
   :maxdepth: 1
-  :caption: Develop
+  :caption: Developer Reference
   :name: sec-develop
   develop/classes/index
 
@@ -14,6 +14,6 @@ Welcome to Square!
 .. Indices and tables
 .. ------------------
 ..
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
+.. * :ref: `genindex`
+.. * :ref: `modindex`
+.. * :ref: `search`
