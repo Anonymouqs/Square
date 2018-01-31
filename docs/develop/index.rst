@@ -8,7 +8,6 @@ philosophy used to create the game itself.
 .. toctree::
     :maxdepth: 1
     :caption: Developer Docs
-    :name: toc-develop
+    :name: sec-develop
     philosophy
     classes
-    
