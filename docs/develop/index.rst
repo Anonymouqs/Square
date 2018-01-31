@@ -10,3 +10,4 @@ philosophy used to create the game itself.
   :caption: Developer Docs
   :name: toc-develop
   philosophy
+  classes/index
