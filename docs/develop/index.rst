@@ -9,5 +9,5 @@ philosophy used to create the game itself.
     :maxdepth: 1
     :caption: Developer Docs
     :name: sec-develop
-    philosophy
-    classes
+
+    classes/index
