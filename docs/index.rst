@@ -7,7 +7,7 @@ Welcome to Square!
 .. toctree::
   :maxdepth: 1
   :caption: Develop
-  :name: sec_develop
+  :name: sec-develop
   develop/classes/index
 
 
