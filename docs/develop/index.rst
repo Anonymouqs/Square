@@ -1,4 +1,4 @@
-Developer Docs
+Develope
 ==============
 
 The Developer Docs is where you can find references
