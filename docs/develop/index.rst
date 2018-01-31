@@ -1,4 +1,4 @@
-Develope
+Developer Docs
 ==============
 
 The Developer Docs is where you can find references
@@ -11,3 +11,4 @@ philosophy used to create the game itself.
     :name: sec-develop
 
     classes/index
+    paradigm/index
