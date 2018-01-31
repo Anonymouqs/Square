@@ -2,13 +2,13 @@
 Welcome to Square!
 ==================
 
-Oranize:
+Organize:
 
 .. toctree::
   :maxdepth: 1
   :caption: Developer Reference
   :name: sec-develop
-  develop/classes/index
+  develop/index
 
 
 .. Indices and tables
