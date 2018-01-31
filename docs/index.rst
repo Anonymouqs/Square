@@ -12,18 +12,9 @@ Organize:
   develop/index
 
 
-
   .. toctree::
-     :maxdepth: 1
-     :caption: Community
-     :name: sec-community
+    :maxdepth: 1
+    :caption: Design Reference
+    :name: sec-develop
 
-     community/index
-
-
-  .. toctree::
-     :maxdepth: 1
-     :caption: Class reference
-     :name: sec-class-ref
-
-     classes/index
+    design/index
