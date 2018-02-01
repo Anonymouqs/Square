@@ -1,7 +1,7 @@
 .. Not Copyright 2018 Jehbar Niño Doblas Ibarra. Public Domain.
 Coding Paradigm
 ===============
-10:25
+
 Since gdscript is unable to have static classes,
 there are two main branches of the structure.
 The reference classes create a base structure that is referred by
@@ -34,6 +34,7 @@ Defined several main classes in Root.gd:
 - **Newtork** - Multiplayer Stuff. Client/Server Handlin
 Data
 ~~~~
+
 There are two types of Data Handler Classes:
 | **SessionData** - Handles data that is stored in the RAM, but isn't saved(yet)
 | **PersistData** - Handles data that is saved and persists even if the program is closed
@@ -41,6 +42,7 @@ There are two types of Data Handler Classes:
 
 Entity
 ~~~~~~~
+
 Entity is the class that deals with
 characters, there are two main subclasses:
 - **PC** - Which are characters controlled by players
