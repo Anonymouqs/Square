@@ -25,26 +25,28 @@ The purpose of reference class is to allow easire changes and refactoring
 of the class structure without having to change every extends.
 
 
-Defined several main classes in Root.gd:
+  Defined several main classes in Root.gd:
 **Data**
-Data
+  Data
 **Entity**
-Characters
+  Characters
 **GUI**
-UI stuff
+  UI stuff
 **Manage**
-Manager Classes
+  Manager Classes
 **Map**
-Level Mechanics
+  Level Mechanics
 **Newtork**
-Multiplayer Stuff. Client/Server Handlin
+  Multiplayer Stuff. Client/Server Handlin
 
 Data
 ~~~~
 
 There are two types of Data Handler Classes:
-* **SessionData** - Handles data that is stored in the RAM, but isn't saved(yet)
-* **PersistData** - Handles data that is saved and persists even if the program is closed
+**SessionData**
+  Handles data that is stored in the RAM, but isn't saved(yet)
+**PersistData**
+  Handles data that is saved and persists even if the program is closed
 
 
 Entity
