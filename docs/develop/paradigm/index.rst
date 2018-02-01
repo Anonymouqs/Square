@@ -26,12 +26,19 @@ of the class structure without having to change every extends.
 
 
 Defined several main classes in Root.gd:
-* **Data** - Data
-* **Entity** - Characters
-* **GUI** - UI stuff
-* **Manage** - Manager Classes
-* **Map** - Level Mechanics
-* **Newtork** - Multiplayer Stuff. Client/Server Handlin
+**Data**
+  Data
+**Entity**
+  Characters
+**GUI**
+  UI stuff
+**Manage**
+  Manager Classes
+**Map**
+  Level Mechanics
+**Newtork**
+  Multiplayer Stuff. Client/Server Handlin
+
 Data
 ~~~~
 
