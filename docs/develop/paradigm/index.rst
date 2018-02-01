@@ -1,3 +1,4 @@
+.. Not Copyright 2018 Jehbar Niño Doblas Ibarra. Public Domain.
 Coding Paradigm
 ===============
 Since gdscript is unable to have static classes,
@@ -5,35 +6,39 @@ there are two main branches of the structure.
 The reference classes create a base structure that is referred by
 more refined subclasses.
 
-The main difference between reference classes and refined classes is
-that the *reference classes* are stored in a "global script folder" while
- *refined classes* are stored in the folder for a specific kind of scene.
+The paradigm that is descibed below is called the **"RR Paradigm"**
 
- For example:
- ::
-   res://scripts/classes/Root.gd
-Is a *reference class*, and
+The main difference between reference classes and refined classes is
+that the **Reference Classes** are stored in a global script folder while
+ **Refined classes** are stored in the folder for a specific kind of scene.
+
+For example:
+::
+  res://scripts/classes/Root.gd
+Is a **reference class**
 ::
   res://scenes/map/door/Door.gd
-Is a *refined class* that likely inherits from a reference class.
+Is a **refined class**
 
 The purpose of reference class is to allow easire changes and refactoring
 of the class structure without having to change every extends.
 
 
-Defined in 3 main classes in Root.gd:
-*Entity* - Characters
-*GUI* - UI stuff
-*Mech* - mechanics
+Defined in 4 main classes in Root.gd:
+**Entity** - Characters
+**GUI** - UI stuff
+**Map** - Mechanics
+**Manage** - Manager Classes
 
 
 Entity
-------
-Entities are Characters, the branch is divided into two main parts:
-*PC* - Which are characters controlled by players
-*NPC* - Charactrs that are controlled by the game.
+~~~~~~~
+Entity is the class that deals with
+characters, there are two main subclasses:
+**PC** - Which are characters controlled by players
+**NPC** - Charactrs that are controlled by the game.
 
 File Structure Paradigm
 =======================
-As recommended by Godot, specific scenes are stored with their
-respective scripts; however, the class tree
+As recommended by Godot, specific scripts are stored with their
+respective scenes; however, the class tree is stored in a script folder.
