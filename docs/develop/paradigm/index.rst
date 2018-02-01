@@ -1,6 +1,7 @@
 .. Not Copyright 2018 Jehbar Niño Doblas Ibarra. Public Domain.
 Coding Paradigm
 ===============
+10:25
 Since gdscript is unable to have static classes,
 there are two main branches of the structure.
 The reference classes create a base structure that is referred by
