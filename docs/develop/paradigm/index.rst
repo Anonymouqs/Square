@@ -24,19 +24,27 @@ The purpose of reference class is to allow easire changes and refactoring
 of the class structure without having to change every extends.
 
 
-Defined in 4 main classes in Root.gd:
-**Entity** - Characters
-**GUI** - UI stuff
-**Map** - Mechanics
-**Manage** - Manager Classes
+Defined several main classes in Root.gd:
+|**Data** - Data
+|**Entity** - Characters
+|**GUI** - UI stuff
+|**Manage** - Manager Classes
+|**Map** - Level Mechanics
+|**Newtork** - Multiplayer Stuff. Client/Server Handling
+
+Data
+~~~~
+There are two types of Data Handler Classes:
+|**SessionData** - Handles data that is stored in the RAM, but isn't saved(yet)
+|**PersistData** - Handles data that is saved and persists even if the program is closed
 
 
 Entity
 ~~~~~~~
 Entity is the class that deals with
 characters, there are two main subclasses:
-**PC** - Which are characters controlled by players
-**NPC** - Charactrs that are controlled by the game.
+|**PC** - Which are characters controlled by players
+|**NPC** - Charactrs that are controlled by the game.
 
 File Structure Paradigm
 =======================

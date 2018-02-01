@@ -3,7 +3,7 @@ extends Node
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-
+var Dragon
 
 
 func _ready():
@@ -15,9 +15,13 @@ func _ready():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
-class Entity extends Node:
+class Entity:
 	export var _health = 100
-	
+	func _ready():
+		
 
 	
 class Map extends Node:
+	
+	
+	
