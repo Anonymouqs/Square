@@ -26,18 +26,18 @@ of the class structure without having to change every extends.
 
 
 Defined several main classes in Root.gd:
-- **Data** - Data
-- **Entity** - Characters
-- **GUI** - UI stuff
-- **Manage** - Manager Classes
-- **Map** - Level Mechanics
-- **Newtork** - Multiplayer Stuff. Client/Server Handlin
+* **Data** - Data
+* **Entity** - Characters
+* **GUI** - UI stuff
+* **Manage** - Manager Classes
+* **Map** - Level Mechanics
+* **Newtork** - Multiplayer Stuff. Client/Server Handlin
 Data
 ~~~~
 
 There are two types of Data Handler Classes:
-| **SessionData** - Handles data that is stored in the RAM, but isn't saved(yet)
-| **PersistData** - Handles data that is saved and persists even if the program is closed
+* **SessionData** - Handles data that is stored in the RAM, but isn't saved(yet)
+* **PersistData** - Handles data that is saved and persists even if the program is closed
 
 
 Entity
