@@ -26,13 +26,12 @@ of the class structure without having to change every extends.
 
 
 Defined several main classes in Root.gd:
-| **Data** - Data
-| **Entity** - Characters
-| **GUI** - UI stuff
-| **Manage** - Manager Classes
-| **Map** - Level Mechanics
-| **Newtork** - Multiplayer Stuff. Client/Server Handling
-
+- **Data** - Data
+- **Entity** - Characters
+- **GUI** - UI stuff
+- **Manage** - Manager Classes
+- **Map** - Level Mechanics
+- **Newtork** - Multiplayer Stuff. Client/Server Handlin
 Data
 ~~~~
 There are two types of Data Handler Classes:
@@ -44,8 +43,8 @@ Entity
 ~~~~~~~
 Entity is the class that deals with
 characters, there are two main subclasses:
-| **PC** - Which are characters controlled by players
-| **NPC** - Charactrs that are controlled by the game.
+- **PC** - Which are characters controlled by players
+- **NPC** - Charactrs that are controlled by the game.
 
 File Structure Paradigm
 =======================
