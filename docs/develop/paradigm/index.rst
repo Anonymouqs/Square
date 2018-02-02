@@ -8,7 +8,7 @@ Below is the specifications and the reasoning behind the paradigm.
 File Structure
 ---------------
 As recommended by Godot, specific scripts are stored with their
-respective scenes; however, the class tree is stored in a script folder.
+respective scenes; however, the class tree is stored in a script folder. 
 
 RR Paradigm
 -----------
@@ -39,6 +39,10 @@ inherit from subclasses from Root.gd.
 
 To search through the plethora of classes, just ctrl+f
 
+
+
+Specification
+-------------
 The main difference between reference classes and refined classes is
 that the **Reference Classes** are stored in a  script folder while
 **Refined classes** are stored in the folder for a specific kind of scene.
