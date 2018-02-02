@@ -26,12 +26,18 @@ Duck typing does not eliminate the need for Class Inheritance. Unfornately,
 the creators of GDscript thought so. Even if a game could function without classes,
 classes are needed to allow the ease of refactoring and maintaining code.
 
-Just as it is not elegant to have Smash be inherited into non-smashable objects,
+Just as it is not elegant to have Smash inherited into non-smashable objects,
 it is neither elegant nor reasonably maintainable to type in ``Var _health ``
 and a setter/getter for each unique type of character or enemy. In a collaborative
 project, convention mistakes could be made, and once a system is implemented,
 it is not easy undoing them. Having an Entity Class allows inheritance of
 such and also reduces the need for typing the same code over and over again.
+
+Also, using file names for gdScript class Inheritance is also tedious and in major refactors,
+quite impossible(emotionally and mentally), so instead, all the "specific" Classes
+inherit from subclasses from Root.gd.
+
+To search through the plethora of classes, just ctrl+f
 
 The main difference between reference classes and refined classes is
 that the **Reference Classes** are stored in a  script folder while
@@ -50,9 +56,9 @@ of the class structure without having to change every extends.
 Several Classes are Defined in Root.gd:
 .. note:: These classes should only be implemented when you need them, if you
 are making a Single-Player Game, you don't really need to use the Network unless
-you are linking scores ect. The framework is designed in mind to allow switching
-between Multiplayer and Single Player/other desicions as painless and easily as
-possible, even at the late stages of a project.
+you are linking high-scores ect. The framework is designed in mind to allow switching
+between Multiplayer and Single Player as well as other desicions as painless and easily as
+possible, even during the late stages of a project.
 
 **Data**
   Data
