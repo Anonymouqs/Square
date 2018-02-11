@@ -1,18 +1,22 @@
-extends "res://scripts/classes/Root.gd"
+extends "res://Root.gd"
 
 export var health = 100
+
 
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	dragon
 	pass
 	
 
 class pc:
+	
 	export var _respawn_pos = Vector2(0,0)
 	
 	
 	func _ready():
+		
 		
 		pass
 

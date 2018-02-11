@@ -8,19 +8,19 @@ Below is the specifications and the reasoning behind the paradigm.
 File Structure
 ---------------
 As recommended by Godot, specific scripts are stored with their
-respective scenes; however, the class tree is stored in a script folder. 
+respective scenes; however, the class tree is stored in a script folder.
 
 RR Paradigm
 -----------
 Since gdscript is unable to have static classes,
 there are two main branches of the structure.
 The **Reference classes** create a base structure that is referred by
-more **refined subclasses**. This combines both worlds of Duck Typing and
-Class Inheritance.
+more **Refined subclasses**. This combines both worlds of Duck Typing and
+Class Inheritance. Once Class Inhertance becomes supported in GDscript, RR
+will have little to no practice use, but in the meantime, it is a workaround
+for the current issue.
 
-
-
-Reasoning: "What about Duck Typing?""
+Reasoning: "What about Duck Typing?"
 -------------------------------------
 Duck typing does not eliminate the need for Class Inheritance. Unfornately,
 the creators of GDscript thought so. Even if a game could function without classes,
@@ -35,10 +35,15 @@ such and also reduces the need for typing the same code over and over again.
 
 Also, using file names for gdScript class Inheritance is also tedious and in major refactors,
 quite impossible(emotionally and mentally), so instead, all the "specific" Classes
-inherit from subclasses from Root.gd.
+inherit from subclasses from Root.gd. You can fragement Root.gd into multiple files
+but the more you split Root.gd, the harder it is to refactor the branch; likewise,
+the less fragmented you create the file, the more "crowded" it looks. But using
+a regular text editor will allow you to command F by placing "placemarkers" with
+the comments. Such as:
+::
+  #Entity
 
-To search through the plethora of classes, just ctrl+f
-
+or simply searching for ``class Entity``
 
 
 Specification

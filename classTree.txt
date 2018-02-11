@@ -1,0 +1,6 @@
+Root: #Initialize line
+    Entity:
+        PC:
+        NPC:
+    Map:
+        Consumable:

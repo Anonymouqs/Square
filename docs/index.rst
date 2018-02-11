@@ -11,7 +11,7 @@ paradigm to developing in Godot.g
 Organize:
 
 .. toctree::
-  :maxdepth: 1
+  :maxdepth: 2
   :caption: Developer Reference
   :name: sec-develop
 
@@ -19,8 +19,7 @@ Organize:
 
 
   .. toctree::
-    :maxdepth: 1
-    :caption: Design Reference
-    :name: sec-design
-
-    design/index
+    :maxdepth: 2
+    :caption: Game Reference
+    :name: sec-game
+    game/index
